@@ -38,5 +38,12 @@ public class Pelicula extends Titulo implements Clasificacion {
         return (int) (calculaMediaEvaluaciones() / 2);
     }
 
+    //  Overrides superclass method.
+    @Override
+    public String toString() {
+        // return super.toString();         //  Default definition.
+        return "Pelicula: " + super.getNombre() + " (" + super.getFechaDeLanzamiento() + ")";
+    }
+
 }
 //  EOF.

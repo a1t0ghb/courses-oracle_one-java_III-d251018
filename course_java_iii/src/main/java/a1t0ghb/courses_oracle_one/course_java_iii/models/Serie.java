@@ -62,5 +62,12 @@ public class Serie extends Titulo {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
 
+    //  Overrides superclass method.
+    @Override
+    public String toString() {
+        // return super.toString();         //  Default definition.
+        return "Serie: " + super.getNombre() + " (" + super.getFechaDeLanzamiento() + ")";
+    }
+
 }
 //  EOF.

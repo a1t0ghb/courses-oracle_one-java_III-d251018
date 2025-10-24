@@ -10,6 +10,8 @@ package a1t0ghb.courses_oracle_one.course_java_iii;
 
 //  IMPORTS - Utilities.
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import a1t0ghb.courses_oracle_one.course_java_iii.models.Pelicula;
 import a1t0ghb.courses_oracle_one.course_java_iii.models.Serie;
@@ -54,6 +56,36 @@ public class AppConListas {
                 System.out.println(pelicula.getClasificacion());    //  Calls method specific of instances of class 'Pelicula'.
             }
         }
+
+        // ---
+        System.out.println("\n ----- ----- -----");
+
+        //  Create list of 'String's to showcase example of sorting.
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Penélope Cruz");
+        listaDeArtistas.add("Antonio Banderas");
+        listaDeArtistas.add("Ricardo Darin");
+        System.out.println("Lista de artistas original: " + listaDeArtistas);
+
+        //  Use (and import) class 'Collections', for sorting methods.
+        Collections.sort(listaDeArtistas);
+        System.out.println("Lista de artistas ordenada: " + listaDeArtistas);
+
+        // ---
+        System.out.println("\n ----- ----- -----");
+
+        //  In order to be able to compare 'Titulo's, it's necessary to add interface 'Comparable', so Java can know how to compare instances from class 'Titulo'.
+        //  - Ref.: 'https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html#compareTo(T)'.
+        System.out.println("Lista de titulos original: " + lista);
+        //  Use (and import) class 'Collections', for sorting methods.
+        //+ IMPORTANT: 'Collections.sort()' works, AFTER implementing interface 'Comparable' in class we want to sort; i.e. 'Titulo'
+        Collections.sort(lista);
+        System.out.println("Lista de titulos ordenados: " + lista);
+
+        //  Use of 'Comparator's class to create additional and different sorting criterias.
+        //+ NOTE: requires to import package 'java.util.Comparator'.
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+        System.out.println("Lista de titulos ordenados (por fecha de lanzamiento): " + lista);
 
     }
 

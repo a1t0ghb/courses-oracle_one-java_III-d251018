@@ -7,12 +7,13 @@
 package a1t0ghb.courses_oracle_one.course_java_iii.models;
 
 //  IMPORTS: EXTERNAL classes and interfaces.
+//  Interface 'Comparable' DOESN'T REQUIRE import.
 
 /**
  *
  * @author a1t0ghb
  */
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
 
     //  Declaration of basic ATTRIBUTES of any title (movie or series). Level of access; i.e. 'private', 'public', 'protected' (or default, if not specified), usually comes from 'business rules'.
     private String nombre;
@@ -102,6 +103,15 @@ public class Titulo {
         // return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
         //  RECOMMENDED: use base 'getters' and 'setters' of attributes, so they are context / class AWARE.
         return (getSumaDeLasEvaluaciones() / getTotalDeEvaluaciones());
+    }
+
+    //  Functions / methods from 'implements'.
+
+    //  From interface 'Comparable', to define how to compare 2 'Titulos'.
+    //  - Ref.: 'https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html#compareTo(T)'.
+    @Override
+    public int compareTo(Titulo otroTitulo) {
+        return getNombre().compareTo(otroTitulo.getNombre());
     }
 
 }

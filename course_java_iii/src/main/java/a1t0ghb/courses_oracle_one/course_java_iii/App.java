@@ -25,9 +25,10 @@ public class App {
     public static void main(String[] args) {
 
         //  Initialization of a 1st INSTANCE of a class 'Pelicula'.
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
-        miPelicula.setFechaDeLanzamiento(2021);
+        // Pelicula miPelicula = new Pelicula();                       //  OLD way of 'initializing' Pelicula.
+        // miPelicula.setNombre("Encanto");
+        // miPelicula.setFechaDeLanzamiento(2021);
+        var miPelicula = new Pelicula("Encanto", 2021);                   //  NEW way of 'initializing' Pelicula, using CUSTOM 'Constructor'.
         miPelicula.setDuracionEnMinutos(180);
         // miPelicula.setIncluidoEnElPlan(true);
         //  Validate in console.
@@ -43,9 +44,10 @@ public class App {
         System.out.println(miPelicula.calculaMediaEvaluaciones());
 
         //  Initialization of an INSTANCE of a class 'Serie'.
-        Serie lost = new Serie();
-        lost.setNombre("Lost");                         //  Inherited from class 'Titulo'.
-        lost.setFechaDeLanzamiento(2000);               //  Inherited from class 'Titulo'.
+        // Serie lost = new Serie();                       //  OLD way of 'initializing'.
+        // lost.setNombre("Lost");                         //  Inherited from class 'Titulo'.
+        // lost.setFechaDeLanzamiento(2000);               //  Inherited from class 'Titulo'.
+        var lost = new Serie("Lost", 2000);             //  NEW way of 'initializing', using CUSTOM 'Constructor'.
         lost.setTemporadas(10);                         //  From own class 'Serie'.
         lost.setMinutosPorEpisodio(50);                 //  From own class 'Serie'.
         lost.setEpisodiosPorTemporada(10);              //  From own class 'Serie'.
@@ -54,9 +56,10 @@ public class App {
         System.out.println("Duracion de la serie: " + lost.getDuracionEnMinutos());         //  Initally inherited from class 'Titulo', but later custom OVERRIDED in own class 'Serie'.
 
         //  Initialization of another INSTANCE of a class 'Pelicula'.
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Avatar");
-        otraPelicula.setFechaDeLanzamiento(2023);
+        // Pelicula otraPelicula = new Pelicula();                     //  OLD way of 'initializing' Pelicula.
+        // otraPelicula.setNombre("Avatar");
+        // otraPelicula.setFechaDeLanzamiento(2023);
+        var otraPelicula = new Pelicula("Avatar", 2023);                  //  NEW way of 'initializing' Pelicula, using CUSTOM 'Constructor'.
         otraPelicula.setDuracionEnMinutos(180);
         // //  Validate in console.
         // otraPelicula.muestraFichaTecnica();
@@ -87,10 +90,11 @@ public class App {
 
         //  Reference variable: 'Pelicula'
         // Pelicula peliculaDeBruno = new Pelicula();      //  Regular declaration.
-        var peliculaDeBruno = new Pelicula();           //  Way to 'loosely' declare a variable and its type: Java infers data type, from right-side of declaration. IT CAN'T BE CHANGED LATER; e.g. 'peliculaDeBruno = 2'.
-        peliculaDeBruno.setNombre("El señor de los anillos.");
+        // var peliculaDeBruno = new Pelicula();           //  Way to 'loosely' declare a variable and its type: Java infers data type, from right-side of declaration. IT CAN'T BE CHANGED LATER; e.g. 'peliculaDeBruno = 2'.
+        // peliculaDeBruno.setNombre("El señor de los anillos.");                  //  OLD way of 'initializing' Pelicula.
+        // peliculaDeBruno.setFechaDeLanzamiento(2001);
+        var peliculaDeBruno = new Pelicula("El señor de los anillos.", 2001);         //  NEW way of 'initializing' Pelicula, using CUSTOM 'Constructor'.
         peliculaDeBruno.setDuracionEnMinutos(180);
-        peliculaDeBruno.setFechaDeLanzamiento(2001);
 
         //  Create ArrayList of 'Pelicula' instances.
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();

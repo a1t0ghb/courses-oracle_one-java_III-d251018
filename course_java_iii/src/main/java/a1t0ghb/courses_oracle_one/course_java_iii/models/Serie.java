@@ -20,6 +20,13 @@ public class Serie extends Titulo {
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
 
+    //  CONSTRUCTOR: custom definition.
+    //  - If we define a constructor for the superclass, now ALL OF ITS SUBCLASSES must have a MATCHING constructor.
+    public Serie(String nombre, int fechaDeLanzamiento) {
+        // super();             //  Default definition.
+        super(nombre, fechaDeLanzamiento);
+    }
+
     //  'Getters' for attributes: own class.
     public int getTemporadas() {
         return temporadas;

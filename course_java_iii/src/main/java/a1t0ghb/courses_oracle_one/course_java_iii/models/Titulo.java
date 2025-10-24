@@ -22,6 +22,12 @@ public class Titulo {
     private double sumaDeLasEvaluaciones;       //  According to 'new business rule', users now can rate a title (movie or series).
     private int totalDeLasEvaluaciones;         //  Counter for amount of ratings.
 
+    //  CONSTRUCTOR: custom definition.
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
     //  'Getters' for attributes.
     public String getNombre() {
         return nombre;

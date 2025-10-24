@@ -18,6 +18,17 @@ public class Pelicula extends Titulo implements Clasificacion {
     //  Attributes declaration.
     private String director;
 
+    //  CONSTRUCTOR: same name as Class.
+    // //  CONSTRUCTOR - default: empty. Although it's useful to initialize attributes with default values.
+    // public Pelicula() {
+    // }
+    //  CONSTRUCTOR: custom definition.
+    //  - If we define a constructor for the superclass, now ALL OF ITS SUBCLASSES must have a MATCHING constructor.
+    public Pelicula(String nombre, int fechaDeLanzamiento) {
+        // super();             //  Default definition.
+        super(nombre, fechaDeLanzamiento);
+    }
+
     //  'Getters' for attributes.
     public String getDirector() {
         return director;

@@ -9,6 +9,7 @@ package a1t0ghb.courses_oracle_one.course_java_iii_challenge_app_shopping.models
 //  IMPORTS: external classes and interfaces.
 
 //  IMPORTS - UTILITIES.
+//  Shortcut for importing ALL Java Utils: 'import java.util.*;'.
 
 //  IMPORTS - CUSTOM CLASSES AND CUSTOM INTERFACES.
 
@@ -51,7 +52,8 @@ public class Compra implements Comparable<Compra> {
 
     //  INHERITED METHODS TO OVERRIDE: custom definitions for CURRENT class.
 
-    //  Overrides from superclass 'Object'. No need to IMPORT.
+    //  Overrides from superclass 'Object'.
+    //  - IMPORT: unnecessary.
     @Override
     public String toString() {
         // return super.toString();                                            //  Default definition.
@@ -60,7 +62,8 @@ public class Compra implements Comparable<Compra> {
 
     //  METHODS FROM 'IMPLEMENTS'.
 
-    //  Overrides from interface 'Comparable'. No need to IMPORT.
+    //  Overrides from interface 'Comparable'.
+    //  - IMPORT: unnecessary.
     //  - Method to compare 2 instances of same CURRENT class.
     //  - When implementing this method, always look for using method '.compareTo()', available in clases listed in 'https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html'.
     //  - e.g. If value to sort is a primitive 'double', CAST IT to class 'Double' (with is casting method '.valueOf()'), so method '.compareTo()' can be used.

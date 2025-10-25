@@ -9,6 +9,7 @@ package a1t0ghb.courses_oracle_one.course_java_iii_challenge_app_shopping.models
 //  IMPORTS: external classes and interfaces.
 
 //  IMPORTS - UTILITIES.
+//  Shortcut for importing ALL Java Utils: 'import java.util.*;'.
 import java.util.ArrayList;
 import java.util.List;
 

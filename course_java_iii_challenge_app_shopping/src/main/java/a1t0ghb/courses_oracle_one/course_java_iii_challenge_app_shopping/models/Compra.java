@@ -37,7 +37,7 @@ public class Compra implements Comparable<Compra> {
         return valor;
     }
 
-    //  ATTRIBUTE'S 'SETTERS': public, by default.
+    //  ATTRIBUTE'S 'SETTERS': usually, public.
     //  Private setter.
     @SuppressWarnings("unused")
     private void setDescripcion(String descripcion) {

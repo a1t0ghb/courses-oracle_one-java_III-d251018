@@ -46,14 +46,17 @@ public class TarjetaDeCredito {
         return listaDeCompras;
     }
 
-    //  ATTRIBUTE'S 'SETTERS': public, by default.
+    //  ATTRIBUTE'S 'SETTERS': usually, public.
+    //  Private setter.
     @SuppressWarnings("unused")
     private void setLimite(double limite) {
         this.limite = limite;
     }
+    //  Private setter.
     private void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+    //  Private setter.
     @SuppressWarnings("unused")
     private void setListaDeCompras(List<Compra> listaDeCompras) {
         this.listaDeCompras = listaDeCompras;

@@ -12,6 +12,7 @@ import java.util.Scanner;
 import java.util.Collections;
 // import java.util.Comparator;
 
+//  IMPORTS - CUSTOM CLASSES AND CUSTOM INTERFACES.
 import a1t0ghb.courses_oracle_one.course_java_iii_challenge_app_shopping.models.Compra;
 import a1t0ghb.courses_oracle_one.course_java_iii_challenge_app_shopping.models.TarjetaDeCredito;
 

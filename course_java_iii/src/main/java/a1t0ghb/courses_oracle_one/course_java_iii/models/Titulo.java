@@ -107,10 +107,14 @@ public class Titulo implements Comparable<Titulo> {
 
     //  Functions / methods from 'implements'.
 
-    //  From interface 'Comparable', to define how to compare 2 'Titulos'.
-    //  - Ref.: 'https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html#compareTo(T)'.
+    //  Overrides from interface 'Comparable'. No need to IMPORT.
+    //  - Method to compare 2 instances of same CURRENT class.
+    //  - When implementing this method, always look for using method '.compareTo()', available in clases listed in 'https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html'.
+    //  - e.g. If value to sort is a primitive 'double', CAST IT to class 'Double' (with is casting method '.valueOf()'), so method '.compareTo()' can be used.
     @Override
     public int compareTo(Titulo otroTitulo) {
+        // return 0;                                                           //  Default definition.
+        //  Use 'nombre'; i.e. a title's name, as criteria, using default behaviour ASC of '.compareTo()'.
         return getNombre().compareTo(otroTitulo.getNombre());
     }
 

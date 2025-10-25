@@ -74,16 +74,19 @@ public class AppConListas {
         // ---
         System.out.println("\n ----- ----- -----");
 
-        //  In order to be able to compare 'Titulo's, it's necessary to add interface 'Comparable', so Java can know how to compare instances from class 'Titulo'.
-        //  - Ref.: 'https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html#compareTo(T)'.
+        //  Sorts list of titles, ASC BY title's name, using 'Collections' class.
         System.out.println("Lista de titulos original: " + lista);
         //  Use (and import) class 'Collections', for sorting methods.
+        //  In order to be able to compare 'Titulo's, it's necessary to add interface 'Comparable', so Java can know how to compare instances from class 'Titulo'.
+        //  - REQUIRES implement class 'Collections'.
+        //  - REQUIRES from class to sort; e.g. 'Titulo', to implement interface 'Comparable'.
         //+ IMPORTANT: 'Collections.sort()' works, AFTER implementing interface 'Comparable' in class we want to sort; i.e. 'Titulo'
         Collections.sort(lista);
         System.out.println("Lista de titulos ordenados: " + lista);
 
-        //  Use of 'Comparator's class to create additional and different sorting criterias.
-        //+ NOTE: requires to import package 'java.util.Comparator'.
+        //  Use of 'Comparator's class to create additional and different sorting criterias ON-THE-FLY.
+        //  - REQUIRES implement class 'Comparator': 'java.util.Comparator'.
+        //  - Unlike 'Collections' approach, it DOESN'T REQUIRE other classes to implement any interface.
         lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
         System.out.println("Lista de titulos ordenados (por fecha de lanzamiento): " + lista);
 
